@@ -1,0 +1,25 @@
+:root{
+    --verde: #0EFF51;
+    --verde-hover: #21803C;
+    --azul: #1D83E1;
+    --azul-2: #00386B;
+    --vermelho: #F42C20;
+    --vermelho-hover: #640F0A;
+    --amarelo: #FEDF3F;
+    --branco: #EDF2F5;
+    --cinza: #C6CBCE;
+    --cinza-hover: #5D6063;
+    --preto: #211E26;
+
+    font-size: 60%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--branco);
+    font-family: Poppins;
+}
