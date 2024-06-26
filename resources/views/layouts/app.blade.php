@@ -9,6 +9,7 @@
     <Header>
         Brawlist
     </Header>
+    <div></div>
         @yield('conteudo')
     <footer>
         Feito Pelos Cotemigos
