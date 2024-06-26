@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('conteudo')
-    <form action="/criacao" method="post">
+    <form action="/exclusao/alerta" method="post">
         @csrf
 
         <Div>Alerta!</Div>
