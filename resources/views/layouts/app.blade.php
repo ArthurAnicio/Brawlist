@@ -15,7 +15,7 @@
         <a href="/">
         <img src="https://www.figma.com/file/I9i7ywKH0gMztD0fOfLxiB/image/2c1d58ef36e1789ff4f15bb7f64137f079d46e7f" alt="">
         </a>
-        <a href="/">Brawlist</a>
+        <a id="headerTitle" href="/">Brawlist</a>
     </header>
         @yield('conteudo')
     <footer>
