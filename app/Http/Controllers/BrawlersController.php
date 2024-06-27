@@ -4,11 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Brawler;
+use Illuminate\Database\Eloquent\Model;
 
 class BrawlersController extends Controller
 {
     public function index() {
-        $brawlers = Brawler::all();
+        $brawlers = Brawler::paginate(10)->onEachSide(1);
         return view('index')->with('brawlers', $brawlers);
     }
     public function create() {
