@@ -9,7 +9,8 @@
     --branco: #EDF2F5;
     --cinza: #C6CBCE;
     --cinza-hover: #5D6063;
-    --preto: #211E26;
+    --preto: #16141a;
+    --rosa: rgba(161, 56, 118, 0.808);
 
     font-size: 60%;
 }
