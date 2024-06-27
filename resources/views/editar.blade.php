@@ -1,33 +1,34 @@
 @extends('layouts.app')
 
 @section('conteudo')
+<div class="container">
     <form action="/update" method="post" id="formBrawler">
         @method('PUT')
         <input type="hidden" name="id" value="{{$brawler->id}}">
         @csrf
 
         
-        <Div>
-            <h1>
+        <div>
+            <label id="title">
                 Edição
-            </h1>
+            </label>
         
         <p>
-            <label for="palavra">Nome</label>
+            <label for="palavra">Nome:</label>
             <input type="text" id="nome" name="nome" value="{{ $brawler->nome }}">
         </p>
 
         <p>
-            <label for="titulo">Titulo</label>
+            <label for="titulo">Titulo:</label>
             <input type="text" id="titulo" name="titulo" value="{{ $brawler->titulo }}">
         </p>
         <p>
-            <label for="imagem">Url da imagem</label>
+            <label for="imagem">Url da imagem:</label>
             <input type="text" id="urlimagem" name="imagem" value="{{ $brawler->imagem }}">
         </p>
 
         <p>
-            <label for="raridade">Raridade</label>
+            <label for="raridade">Raridade:</label>
             <select id="raridade" name="raridade">
                 <option value="Inicial" {{$brawler->raridade == 'Inicial' ? 'selected' : ''}}>Inicial</option>
                 <option value="Raro" {{$brawler->raridade == 'Raro' ? 'selected' : ''}}>Raro</option>
@@ -39,7 +40,7 @@
         </p>
 
         <p>
-            <label for="categoria">Categoria</label>
+            <label for="categoria">Categoria:</label>
             <select id="categoria" name="categoria">
                 <option value="Destruidor" {{$brawler->categoria == 'Destruidor' ? 'selected' : ''}}>Destruidor</option>
                 <option value="Algoz" {{$brawler->categoria == 'Algoz' ? 'selected' : ''}}>Algoz</option>
@@ -52,14 +53,15 @@
         </p>
 
        
-        <p>
+        <div id="submitBtn">
             <button type="submit" id="enviarBrawler">Salvar</button>    
-        </p>
-        <p id="unfilledAlert"></p>
+        </div>
+        <p id="unfilledAlert">*Preencha todos os campos!</p>
 
-    </Div>
+    </div>
             
        
     </form>
+    </div>
     @vite('resources/js/validate.js')
     @endsection

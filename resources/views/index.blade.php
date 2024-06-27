@@ -1,7 +1,6 @@
 @extends ('layouts.app')
 
 @section ('conteudo')
-<div id="container">
 <div class="blueIcon">
 <a href='/create' ><i class="fa-solid fa-plus"></i></a>
 </div>
@@ -11,7 +10,7 @@
         <div class="card">           
             <section>
             <div class="image">
-            <img height="150px" src="{{$brawler->imagem}}">
+            <img src="{{$brawler->imagem}}">
             </div>
             <h2>{{ $brawler->nome }} </h2>
             <h3>{{ $brawler->titulo }} </h3>
@@ -31,5 +30,5 @@
     @endforeach
     {{$brawlers->render('paginator.custom-pagination')}}
 </div>
-</div>
+
 @endsection

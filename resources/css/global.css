@@ -18,9 +18,14 @@
     margin: 0;
 }
 
+html {
+    background-color: #555;
+}
+
 body {
     background-color: var(--branco);
     font-family: Poppins;
+    max-width: 1200px;
 }
 
 header {
@@ -37,7 +42,9 @@ header img{
     width: 200px;
 }
 
-header h1{
+header a{
+    text-decoration: none;
+    font-weight: bold;
     color: var(--branco);
     font-size: 3em;
     position: absolute;
@@ -55,7 +62,7 @@ footer {
 
 footer h1{
     color: var(--branco);
-    font-size: 3em;
+    font-size: 2em;
 }
 
 nav {
@@ -66,6 +73,95 @@ nav {
 #brawlersContainer{
     width: 500px;
     margin: 0 auto;
+    min-height: 100vh
+}
+
+#formBrawler {
+    border-radius: 10px;
+    background-color: var(--azul);
+    height: auto;
+    margin-top: 100px;
+    padding: 50px;
+    display: flex;
+}
+
+#formBrawler div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#formBrawler p {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+
+
+#title{
+    text-align: center;
+    color: var(--branco);
+    font-size: 2em !important;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#formBrawler input{
+    padding-left: 10px;
+    margin-left: 20px;
+    outline: none;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--branco);
+    width: 200px;
+}
+
+#formBrawler select{
+    padding-left: 10px;
+    margin-left: 20px;
+    outline: none;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--branco);
+    width: 120px;
+}
+
+#formBrawler label{
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--branco);
+}
+
+#unfilledAlert {
+    color: var(--vermelho);
+    margin-top: 10px;
+}
+
+
+#enviarBrawler{
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    outline: none;
+    border-radius: 100px;
+    border: none;
+    background-color: var(--verde);
+    color: var(--branco);
+    font-size: 2em;
+    font-weight: bold;
+    transition: .2s;
+}
+
+#enviarBrawler:hover{ 
+    background-color: var(--verde-hover);
+}
+
+.container {
+    align-items: flex-start;
+    justify-content: center;
+    display: flex;
     min-height: 100vh
 }
 
@@ -84,6 +180,10 @@ nav {
     width: 200px;
     text-align: center;
     border-radius: 100px;
+}
+
+.image img{
+    height: 150px;
 }
 
 .image{
@@ -151,6 +251,72 @@ section.icons{
     top: 20px;
 }
 
+.deleteBrawler {
+    background-color: var(--azul);
+    margin-top: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.choice{
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.deleteBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    width: 70px;
+    height: 70px;
+    border-radius: 8px;
+    color: var(--branco);
+    font-size: 25px;
+}
+
+.choice button {
+    background-color: var(--verde);
+    transition: .2s;
+}
+
+.choice button:hover {
+    background-color: var(--verde-hover);
+}
+
+.choice a {
+    background-color: var(--vermelho);
+    transition: .2s;
+}
+
+.choice a:hover {
+    background-color: var(--vermelho-hover);
+}
+
+#alertTitle{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: var(--branco);
+    background-color: red;
+    width: 100%;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.deleteBrawler label {
+    margin: 20px;
+    font-size: 1.5em;
+}
+
 #editIcon{
     width: 70px;
     height: 70px;
@@ -171,4 +337,63 @@ section.icons{
 
 #deleteIcon:hover{
     background-color: var(--vermelho-hover);
+}
+
+@media (max-width: 578px) {
+    .card {
+        width: 270px;
+        flex-flow: column;
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    #brawlersContainer {
+        width: 300px;
+        padding: 0;
+    }
+
+    header img {
+        display: none;
+    }
+
+
+    header {
+        height: 50px;
+    }
+
+    footer h1 {
+        font-size: 1em;
+    }
+
+    #formBrawler {
+        border-radius: 0;
+        width: 100%;
+        padding: 0;
+        padding-top: 20px;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 70px;
+    }
+
+    #formBrawler p {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #formBrawler input,
+    #formBrawler select {
+        height: 30px;
+        margin-top: 10px;
+    }
+
+    .deleteBrawler label {
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    .deleteBtn{
+        font-size: 20px;
+        width: 60px;
+        height: 60px;
+    }
+
 }

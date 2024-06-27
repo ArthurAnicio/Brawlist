@@ -10,7 +10,7 @@ function validate() {
     const alert = document.getElementById("unfilledAlert");
     if (name == "" || title == "" || image == "") {
         submit.disabled = true;
-        alert.innerHTML = "Preencha todos os campos!";
+        alert.innerHTML = "*Preencha todos os campos!";
     }
     else {  
         submit.disabled = false;

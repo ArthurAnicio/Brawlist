@@ -1,17 +1,19 @@
 @extends('layouts.app')
 
 @section('conteudo')
-    <form action="/delete" method="post" id="form-delete-{{ $brawler->id }}">
+<div class="container">
+    <form action="/delete" method="post" id="form-delete-{{ $brawler->id }}" class="deleteBrawler">
         @method('DELETE')
         <input type="hidden" name="id" value="{{ $brawler->id}}">
         @csrf
 
-        <div>Alerta!</div>
-        <div></div>
-        <label for="excluir"> Tem certeza que deseja excluir o seguinte Brawler: {{$brawler->nome}}?</label>
+        <div id="alertTitle">Alerta!</div>
+        <label for="excluir"> Tem certeza que deseja excluir {{$brawler->nome}}?</label>
         
-        <button type="submit">SIM</button> <a href="/">NÃO</a>  
+        <section class="choice">
+        <button class="deleteBtn" type="submit">SIM</button> <a href="/" class="deleteBtn">NÃO</a>  
+        </section>
 
     </form>
-
+    </div>
     @endsection

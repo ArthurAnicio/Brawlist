@@ -1,30 +1,31 @@
 @extends('layouts.app')
 
 @section('conteudo')
+<div class="container">
     <form action="/store" method="post" id="formBrawler">
         @csrf
 
         
         <div>
-            <h1>
+            <label id="title">
                 Criação
-            </h1>
+            </label>
         <p>
-            <label for="palavra">Nome</label>
+            <label for="palavra">Nome:</label>
             <input type="text" id="nome" name="nome" value="">
         </p>
 
         <p>
-            <label for="titulo">Titulo</label>
+            <label for="titulo">Titulo:</label>
             <input type="text" id="titulo" name="titulo" value="">
         </p>
         <p>
-            <label for="imagem">Url da imagem</label>
+            <label for="imagem">Url da imagem:</label>
             <input type="text" id="urlimagem" name="imagem" value="">
         </p>
 
         <p>
-            <label for="raridade">Raridade</label>
+            <label for="raridade">Raridade:</label>
             <select id="raridade" name="raridade">
                 <option value="Inicial">Inicial</option>
                 <option value="Raro">Raro</option>
@@ -36,7 +37,7 @@
         </p>
 
         <p>
-            <label for="categoria">Categoria</label>
+            <label for="categoria">Categoria:</label>
             <select id="categoria" name="categoria">
                 <option value="Destruidor">Destruidor</option>
                 <option value="Algoz">Algoz</option>
@@ -49,14 +50,14 @@
         </p>
 
        
-        <p>
+        <div id="submitBtn">
             <button type="submit" id="enviarBrawler" disabled="disabled">Criar</button>    
-        </p>
-        <p id="unfilledAlert">Preencha todos os campos!</p>
+        </div>
+        <p id="unfilledAlert">*Preencha todos os campos!</p>
         
     </div>
         
     </form>
-
+    </div>
     @vite('resources/js/validate.js')
     @endsection
