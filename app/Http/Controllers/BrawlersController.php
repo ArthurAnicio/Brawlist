@@ -46,4 +46,13 @@ class BrawlersController extends Controller
 
         return redirect('/');
     }
+    public function alerta($id) {
+        $reg = Brawler::find($id);
+        return view('alerta')->with('brawler', $reg);
+    }
+    public function delete(Request $req) {
+        $reg = Brawler::find($req->id);
+        $reg->delete();
+        return redirect('/');
+    }
 }

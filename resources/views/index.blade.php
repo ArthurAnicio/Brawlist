@@ -11,6 +11,7 @@
             <p>{{ $brawler->categoria}}</p>
             <p>{{ $brawler->raridade}}</p>
             <a href="/edit/{{$brawler->id}}">Editar</a>
+            <a href="/alerta/{{$brawler->id}}">Excluir</a>
         </div>
     @endforeach
 </div>
