@@ -29,6 +29,7 @@
         <p>
             <label for="raridade">Raridade</label>
             <select id="raridade" name="raridade">
+                <option value="Inicial" {{$brawler->raridade == 'Inicial' ? 'selected' : ''}}>Inicial</option>
                 <option value="Raro" {{$brawler->raridade == 'Raro' ? 'selected' : ''}}>Raro</option>
                 <option value="Super-Raro" {{$brawler->raridade == 'Super-Raro' ? 'selected' : ''}}>Super-Raro</option>
                 <option value="Épico" {{$brawler->raridade == 'Épico' ? 'selected' : ''}}>Épico</option>

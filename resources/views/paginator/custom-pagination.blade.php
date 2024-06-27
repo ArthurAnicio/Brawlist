@@ -1,25 +1,21 @@
 @if($paginator->hasPages())
     <nav>
         <span>
-            @if($paginator->onFirstPage())
-                <span>
-                    Anterior
-                </span>
-            @else
+            @if(! $paginator->onFirstPage())
+            <div class="blueIcon">
                 <a href="{{$paginator->previousPageUrl()}}">
-                    Anterior
+                <i class="fa-solid fa-arrow-left"></i>
                 </a>
+            </div>
             @endif
         </span>
         <span>
             @if($paginator->hasMorePages())
+            <div class="blueIcon">
                 <a href="{{$paginator->nextPageUrl()}}">
-                    Próximo
+                <i class="fa-solid fa-arrow-right"></i>
                 </a>
-            @else
-                <span>
-                    Próximo
-                </span>
+            </div>
             @endif
         </span>
     </nav>

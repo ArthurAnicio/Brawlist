@@ -5,7 +5,7 @@
         @csrf
 
         
-        <Div>
+        <div>
             <h1>
                 Criação
             </h1>
@@ -26,6 +26,7 @@
         <p>
             <label for="raridade">Raridade</label>
             <select id="raridade" name="raridade">
+                <option value="Inicial">Inicial</option>
                 <option value="Raro">Raro</option>
                 <option value="Super-Raro">Super-Raro</option>
                 <option value="Épico">Épico</option>
@@ -52,7 +53,7 @@
             <button type="submit">Criar</button>    
         </p>
         
-    </Div>
+    </div>
         
     </form>
 

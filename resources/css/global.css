@@ -2,7 +2,7 @@
     --verde: #0EFF51;
     --verde-hover: #21803C;
     --azul: #1D83E1;
-    --azul-2: #00386B;
+    --azul2: #00386B;
     --vermelho: #F42C20;
     --vermelho-hover: #640F0A;
     --amarelo: #FEDF3F;
@@ -11,8 +11,6 @@
     --cinza-hover: #5D6063;
     --preto: #16141a;
     --rosa: rgba(161, 56, 118, 0.808);
-
-    font-size: 60%;
 }
 
 * {
@@ -23,4 +21,154 @@
 body {
     background-color: var(--branco);
     font-family: Poppins;
+}
+
+header {
+    display: flex;
+    background-color: var(--azul);
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+    align-items: center;
+}
+
+header img{
+    object-fit: contain;
+    width: 200px;
+}
+
+header h1{
+    color: var(--branco);
+    font-size: 3em;
+    position: absolute;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+footer {
+    background-color: var(--azul);
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer h1{
+    color: var(--branco);
+    font-size: 3em;
+}
+
+nav {
+    justify-content: center;
+    display: flex;
+}
+
+#brawlersContainer{
+    width: 500px;
+    margin: 0 auto;
+    min-height: 100vh
+}
+
+.card {
+    border-radius: 20px;
+    padding: 20px 20px;
+    background-color: var(--azul2);
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card h2{
+    color: var(--preto);
+    background-color: var(--branco);
+    width: 200px;
+    text-align: center;
+    border-radius: 100px;
+}
+
+.image{
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 150px;
+    width: 200px;
+}
+
+.card h3{
+    color: var(--amarelo);
+    text-align: center;
+}
+
+.card section{
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.card h1{
+    color: var(--branco);
+}
+
+section.icons{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+}
+
+.icons a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.icons i{
+    color: var(--branco);
+    font-size: 45px;
+}
+
+.blueIcon a{
+    text-decoration: none;
+}
+
+.blueIcon i {
+    font-size: 45px;
+    color: var(--branco);
+}   
+
+.blueIcon {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    width: 70px;
+    height: 70px;
+    background-color: var(--azul);
+    position: sticky;
+    top: 20px;
+}
+
+#editIcon{
+    width: 70px;
+    height: 70px;
+    background-color: var(--verde);
+    transition: .2s;
+}
+
+#deleteIcon{
+    width: 70px;
+    height: 70px;
+    background-color: var(--vermelho);
+    transition: .2s;
+}
+
+#editIcon:hover{
+    background-color: var(--verde-hover);
+}
+
+#deleteIcon:hover{
+    background-color: var(--vermelho-hover);
 }

@@ -6,7 +6,7 @@
         <input type="hidden" name="id" value="{{ $brawler->id}}">
         @csrf
 
-        <Div>Alerta!</Div>
+        <div>Alerta!</div>
         <div></div>
         <label for="excluir"> Tem certeza que deseja excluir o seguinte Brawler: {{$brawler->nome}}?</label>
         
