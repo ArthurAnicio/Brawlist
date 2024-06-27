@@ -1,51 +1,52 @@
 @extends('layouts.app')
 
 @section('conteudo')
-    <form action="/editar" method="post">
+    <form action="/update" method="post">
+        @method('PUT')
+        <input type="hidden" name="id" value="{{$brawler->id}}">
         @csrf
 
-        <Header>
-            Brawlist
-        </Header>
+        
         <Div>
             <h1>
                 Edição
             </h1>
+        
         <p>
             <label for="palavra">Nome</label>
-            <input type="text" id="nome" name="nome" value="">
+            <input type="text" id="nome" name="nome" value="{{ $brawler->nome }}">
         </p>
 
         <p>
             <label for="titulo">Titulo</label>
-            <input type="text" id="titulo" name="titulo" value="">
+            <input type="text" id="titulo" name="titulo" value="{{ $brawler->titulo }}">
         </p>
         <p>
             <label for="imagem">Url da imagem</label>
-            <input type="text" id="urlimagem" name="imagem" value="">
+            <input type="text" id="urlimagem" name="imagem" value="{{ $brawler->imagem }}">
         </p>
 
         <p>
             <label for="raridade">Raridade</label>
             <select id="raridade" name="raridade">
-                <option value="Raro">Raro</option>
-                <option value="Super-Raro">Super-Raro</option>
-                <option value="Épico">Épico</option>
-                <option value="Mítico">Mítico</option>
-                <option value="Lendário">Lendário</option>
+                <option value="Raro" {{$brawler->raridade == 'Raro' ? 'selected' : ''}}>Raro</option>
+                <option value="Super-Raro" {{$brawler->raridade == 'Super-Raro' ? 'selected' : ''}}>Super-Raro</option>
+                <option value="Épico" {{$brawler->raridade == 'Épico' ? 'selected' : ''}}>Épico</option>
+                <option value="Mítico" {{$brawler->raridade == 'Mítico' ? 'selected' : ''}}>Mítico</option>
+                <option value="Lendário" {{$brawler->raridade == 'Lendário' ? 'selected' : ''}}>Lendário</option>
             </select>
         </p>
 
         <p>
             <label for="categoria">Categoria</label>
             <select id="categoria" name="categoria">
-                <option value="Destruidor">Destruidor</option>
-                <option value="Algoz">Algoz</option>
-                <option value="Tiro-Preciso">Tiro-Preciso</option>
-                <option value="Detonador">Detonador</option>
-                <option value="Tanque">Tanque</option>
-                <option value="Suporte">Suporte</option>
-                <option value="Controle">Controle</option>
+                <option value="Destruidor" {{$brawler->categoria == 'Destruidor' ? 'selected' : ''}}>Destruidor</option>
+                <option value="Algoz" {{$brawler->categoria == 'Algoz' ? 'selected' : ''}}>Algoz</option>
+                <option value="Tiro-Preciso" {{$brawler->categoria == 'Tiro-Preciso' ? 'selected' : ''}}>Tiro-Preciso</option>
+                <option value="Detonador" {{$brawler->categoria == 'Detonador' ? 'selected' : ''}}>Detonador</option>
+                <option value="Tanque" {{$brawler->categoria == 'Tanque' ? 'selected' : ''}}>Tanque</option>
+                <option value="Suporte" {{$brawler->categoria == 'Suporte' ? 'selected' : ''}}>Suporte</option>
+                <option value="Controle" {{$brawler->categoria == 'Controle' ? 'selected' : ''}}>Controle</option>
             </select>
         </p>
 
@@ -56,9 +57,7 @@
         
     </Div>
             
-        <footer>
-            Feito Pelos Cotemigos
-        </footer>
+       
     </form>
 
     @endsection

@@ -31,4 +31,19 @@ class BrawlersController extends Controller
 
         return redirect('/');
     }
+    public function edit($id) {
+        $reg = Brawler::find($id);
+        return view('editar')->with('brawler',$reg);
+    }
+    public function update(Request $req) {
+        $brawler = Brawler::find($req->id);
+        $brawler->nome = $req->nome;
+        $brawler->titulo = $req->titulo;
+        $brawler->imagem = $req->imagem;
+        $brawler->categoria = $req->categoria;
+        $brawler->raridade = $req->raridade;
+        $brawler->save();
+
+        return redirect('/');
+    }
 }

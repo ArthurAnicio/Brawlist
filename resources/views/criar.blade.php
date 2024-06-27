@@ -4,9 +4,7 @@
     <form action="/store" method="post">
         @csrf
 
-        <Header>
-            Brawlist
-        </Header>
+        
         <Div>
             <h1>
                 Criação
@@ -56,9 +54,6 @@
         
     </Div>
         
-        <footer>
-            Feito Pelos Cotemigos
-        </footer>
     </form>
 
 
