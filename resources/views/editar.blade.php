@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('conteudo')
-    <form action="/update" method="post">
+    <form action="/update" method="post" id="formBrawler">
         @method('PUT')
         <input type="hidden" name="id" value="{{$brawler->id}}">
         @csrf
@@ -52,12 +52,13 @@
 
        
         <p>
-            <button type="submit">Salvar</button>    
+            <button type="submit" id="enviarBrawler">Salvar</button>    
         </p>
-        
+        <p id="unfilledAlert"></p>
+
     </Div>
             
        
     </form>
-
+    @vite('resources/js/validate.js')
     @endsection

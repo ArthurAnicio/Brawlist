@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('conteudo')
-    <form action="/store" method="post">
+    <form action="/store" method="post" id="formBrawler">
         @csrf
 
         
@@ -49,12 +49,13 @@
 
        
         <p>
-            <button type="submit">Criar</button>    
+            <button type="submit" id="enviarBrawler" disabled="disabled">Criar</button>    
         </p>
+        <p id="unfilledAlert">Preencha todos os campos!</p>
         
     </Div>
         
     </form>
 
-
+    @vite('resources/js/validate.js')
     @endsection
