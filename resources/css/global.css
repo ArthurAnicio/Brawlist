@@ -21,7 +21,6 @@
 body {
     background-color: var(--branco);
     font-family: Poppins;
-    max-width: 1200px;
 }
 
 header {
@@ -235,6 +234,7 @@ section.icons{
 }   
 
 .blueIcon {
+    cursor: pointer;
     margin: 20px;
     display: flex;
     align-items: center;
@@ -265,6 +265,7 @@ section.icons{
 }
 
 .deleteBtn{
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
