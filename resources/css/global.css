@@ -103,6 +103,7 @@ nav {
 }
 
 #formBrawler input{
+    font-size: 1.3em;
     padding-left: 10px;
     margin-left: 20px;
     outline: none;
@@ -113,6 +114,7 @@ nav {
 }
 
 #formBrawler select{
+    font-size: 1.3em;
     padding-left: 10px;
     margin-left: 20px;
     outline: none;
@@ -336,7 +338,7 @@ section.icons{
     background-color: var(--vermelho-hover);
 }
 
-@media (max-width: 578px) {
+@media (max-width: 576px) {
     .card {
         width: 270px;
         flex-flow: column;
@@ -394,3 +396,4 @@ section.icons{
     }
 
 }
+
