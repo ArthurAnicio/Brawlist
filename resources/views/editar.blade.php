@@ -56,7 +56,7 @@
         <div id="submitBtn">
             <button type="submit" id="enviarBrawler">Salvar</button>    
         </div>
-        <p id="unfilledAlert">*Preencha todos os campos!</p>
+        <p id="unfilledAlert"></p>
 
     </div>
             
