@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class BrawlersController extends Controller
 {
     public function index() {
-        $brawlers = Brawler::paginate(10)->onEachSide(1);
+        $brawlers = Brawler::paginate(10);
         return view('index')->with('brawlers', $brawlers);
     }
     public function create() {
